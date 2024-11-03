@@ -9,7 +9,9 @@ function App() {
   return (
     <>
       <Header />
-      <MyCard />
+      <MyCard title = "Card 1" button = "lol"/>
+      <MyCard title = "Card 2" button = "lol"/>
+      <MyCard title = "Card 3" button = "lol"/>
     </>
   )
 }
