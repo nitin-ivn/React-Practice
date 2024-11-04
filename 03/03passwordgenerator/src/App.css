@@ -1,0 +1,22 @@
+.gen{
+    height: 38px;
+}
+
+.len{
+    cursor: pointer;
+}
+
+.copy-btn{
+    margin-top: 1px;
+    margin-left: -3px;
+    height: 36px;
+}
+
+.pass{
+    max-width: 100%;
+}
+
+.textpass{
+    min-width: 26rem;
+    max-width: 26rem;
+}
