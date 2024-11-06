@@ -16,8 +16,8 @@ function App() {
   const swap = () => {
     setFrom(to);
     setTo(from);
-    setConvertedAmount(amount)
-    setAmount(convertedAmount)
+    setConvertedAmount(0)
+    setAmount(0)
   }
 
   const convert = () => {
@@ -32,8 +32,8 @@ function App() {
       backgroundRepeat: 'no-repeat'
      }}
      >
-      <div className='w-100'>
-        <div className='w-100 mx-auto border border-dark rounded-lg p-5
+      <div className='w-50'>
+        <div className='blur-background w-100 mx-auto border border-dark rounded-2 p-3
         '>
           <form onSubmit={(e) => {
             e.preventDefault()
@@ -49,6 +49,32 @@ function App() {
                selectedCurrency= {from}
               />
             </div>
+
+            <div class="position-relative w-100 h-50">  
+              <button 
+              class="btn btn-dark position-absolute top-50 start-50 translate-middle"
+              onClick={swap}
+              >  
+                Swap  
+              </button>  
+            </div> 
+
+            <div className='w-100 mb-1'>
+              <InputBox 
+               label= "to"
+               amount = {convertedAmount}
+               amountDisabled
+               currencyOptions={options}
+               onCurrencyChange={(currency) => setTo(currency)}
+               selectedCurrency= {to}
+              />
+            </div>
+
+            <button className= 'btn btn-dark w-100 px-3 py-2'
+             onClick={convert}
+            >
+              Convert {from.toUpperCase()} To {to.toUpperCase()}
+            </button>
           </form>
         </div>
       </div>
